@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(167, 119, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(222, 224, 86);
+    margin: -10px
+}
+
+.profile img{
+    display: flex;
+}
+
+.link a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+.icon img {
+    height: 30px;
+}
+.profile {
+    background-color: rgb(235, 236, 167);
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+    color: #a59344;
+    font-weight: bold;
+    font-size: 20px;
+}
+#about-me {
+    display: flex;
+}
+.pic img {
+    width: 500px;
+}
+h1 {
+    color: rgb(243, 222, 167);
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.allskill {
+    display: flex;
+}
+.skill img {
+    height: 300px;
+}
+.skill {
+    border: 1px solid  lightgrey;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 20px grey;
+}
+h2{
+    color: #3d2212;
+}
+#all_rec {
+    display: flex;
+}
+.rec{
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 20px ;
+    border-radius: 10px;
+    padding: 10px;
+}
+span{
+    color: #a59344;
+    font-size: 30px;
+}
