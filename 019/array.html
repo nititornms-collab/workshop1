@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <h1>Fruit Market</h1>
+    <script>
+        let fruit=["ส้มโอ","มะม่วง","ทุเรียน","แตงโม","มะพร้าว"];
+        let price=[80, 50, 159, 60, 20];
+        let unit=["ลูก","โล","โล","ลูก","ลูก"];
+        let qty=[5,3,4,8,7];
+        let total=0;
+        let sum=0;
+        let image=["<img src='img/orange.jpg' width=100>","<img src='img/mango.jpg' width=100>",
+            "<img src='img/durian.jpg' width=100>","<img src='img/watermelon.jpg' width=100>","<img src='img/coconut.jpg' width=100>"]
+
+        document.write("<table border='1'>");
+        document.write("<th>ชื่อผลไม้</th><th>ราคาต่อหน่วย</th><th>จำนวน</th><th>ราคารวม</th>");
+
+        for(i=0;i<fruit.length;i++){
+            total = price[i]*qty[i];
+            sum+=total;
+            document.write("<tr>");
+            document.write("<td>");
+                document.write("<h4>",image[i]," ","<td>",unit[i],"ละ ",price[i]," บาท "
+                ,"<td>",qty[i]," ลูก" ,"<td>",price[i]*qty[i]," บาท</td>","<br>");
+            document.write("</h4>");
+        }
+        document.write("</table>");
+        document.write("<h2>ราคารวมทั้งสิ้น : ",sum," บาท</h2>");
+    </script>
+</body>
+</html>
