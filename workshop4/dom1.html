@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+    </head>
+    <body>
+        <h1>มหาวิทยาลัยราชภัฎนครปฐม</h1>
+        <p class="welcome">ยินดีต้อนรับ</p>
+        <p id="message">สาขาวิทยาการคอมพิวเตอร์</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <img src="logo credit bank3.png">
+        <script>
+            const imgElem=document.querySelector ("img");
+            imgElem.src="scilogo.jpg"
+            imgElem.setAttribute("height", "200");
+        const element1=document.getElementById("message");
+        element1.innerHTML="<strong>Computer Science</strong>";
+
+        const element2=document.querySelector(".welcome");
+        element2.textContent+= "NPRU";
+
+        const element3=document.querySelectorAll("p");
+        element3.forEach((element) =>{
+            element.textContent = "xxxxxxxx";
+            element.style.color = "green";
+            element.style.fontSize= "20px";
+        });
+
+        const newElem = document.createElement
+        ("h2");
+        newElem.textContent = "Computer Science @NPRU";
+        const lastElem=document.body.appendChild(newElem);
+        lastElem.remove();
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>มหาวิทยาลัยราชภัฏนครปฐม</h1>
+        <textarea type="text" id="text" placeholder="เชิญพิมพ์ข้อความ"></textarea>
+        <p>Character count: <span id="count">0</span></p>
+        <button>sumbit</button>
+        <script >
+            const tinput = document.getElementById("text");
+            const btn = document.querySelector("button");
+            btn.addEventListener("click",() =>{
+                const showmessage=document.getElementById("count");
+                if(tinput.value.length<0){
+                    showmessage.textContent="รหัสผ่านอย่างน้อย 1 ตัว";
+                }else{
+                    showmessage.textContent=tinput.value.length;
+                }
+            })
+
+            
+        </script> 
+    </body> 
+</html>

@@ -1,0 +1,41 @@
+.<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="uname" placeholder="ใส่ชื่อ">
+        <input type="email" id="email" placeholder="กรุณาใส่อีเมล">
+        <input type="password" id="pwd" placeholder="กรุณาใส่รหัส">
+        <p id="showuname"></p>
+        <p id="showmessage"></p>
+        <p id="massage"></p>
+        <script>
+            const unameinput =document.getElementById("uname");
+            const emailinput =document.getElementById("email");
+            const pwdinput =document.getElementById("pwd");
+            unameinput.addEventListener("input",() =>{
+                const showpara = document.getElementById("showuname");
+                showpara.textContent="Welcome"+unameinput.value+"to NPRU";
+            })
+
+            emailinput.addEventListener("input",() =>{
+                const showmessage = document.getElementById("showmessage");
+                if(emailinput.value.includes("@")){
+                    showmessage.textContent ="อีเมลของคุณ คือ"+emailinput.value;
+                }else{
+                    showmessage.textContent ="อีเมลไม่ถูกต้อง กรุณากรอกใหม่";
+                }
+            })
+
+            pwdinput.addEventListener("input",() =>{
+                const showmessage= document.getElementById("massage");
+                if(pwdinput.value.length<8){
+                    showmessage.textContent="รหัสผ่านอย่างน้อย 8 ตัว";
+                }else{
+                    showmessage.textContent="รหัสผ่านเป็นไปตามเกณฑ์"+pwdinput.value.length+"ตัวอักษร";
+                }
+            })
+        </script>
+    </body>
+</html>
