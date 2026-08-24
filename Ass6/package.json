@@ -1,0 +1,12 @@
+{
+  "name": "assignment-6-library-system",
+  "version": "1.0.0",
+  "description": "Assignment 6 - Library System RESTful API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

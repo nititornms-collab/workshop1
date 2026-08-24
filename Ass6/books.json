@@ -1,0 +1,26 @@
+[
+  {
+    "isbn": "885415125421",
+    "title": "Node.js",
+    "author": "Suvimol Mukviboonchai",
+    "year": 2025,
+    "publisher": "NPRU",
+    "status": "available"
+  },
+  {
+    "isbn": "8854225655",
+    "title": "JavaScript เบื้องต้น",
+    "author": "Suvimol Mukviboonchai",
+    "year": 2024,
+    "publisher": "NPRU",
+    "status": "borrowed"
+  },
+  {
+    "isbn": "88541263252",
+    "title": "HTML และ CSS",
+    "author": "Suvimol Mukviboonchai",
+    "year": 2023,
+    "publisher": "NPRU",
+    "status": "available"
+  }
+]
