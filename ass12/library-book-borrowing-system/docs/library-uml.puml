@@ -1,0 +1,55 @@
+@startuml
+title Library Book Borrowing System
+skinparam classAttributeIconSize 0
+
+class LibraryDAO {
+  - db: Database
+  + addBook(book: Book): void
+  + registerMember(member: Member): void
+  + getAllBooks(): Book[]
+  + getAllMembers(): Member[]
+  + borrowBook(isbn: string, memberId: string): void
+  + returnBook(isbn: string, memberId: string): void
+  + getBorrowingRecords(): BorrowingRow[]
+}
+
+abstract class BaseDAO {
+  # db: Database
+  # initTable(): void
+}
+
+class Book {
+  - isbn: string
+  - title: string
+  - author: string
+  - format: BookFormat
+  + getISBN(): string
+  + getTitle(): string
+  + getAuthor(): string
+  + getFormat(): BookFormat
+  + getDetails(): string
+}
+
+interface Member {
+  memberId: string
+  name: string
+  email: string
+}
+
+enum BookFormat {
+  PrintedBook
+  EBook
+}
+
+BaseDAO <|-- LibraryDAO
+LibraryDAO "1" o-- "0..*" Book : manages
+LibraryDAO "1" o-- "0..*" Member : registers
+LibraryDAO "1" *-- "0..*" BorrowingRow : tracks
+Book --> BookFormat
+note right of LibraryDAO
+  Each ISBN can have at most one
+  active borrowing at a time.
+  A member can return only a book
+  borrowed under their member ID.
+end note
+@enduml
