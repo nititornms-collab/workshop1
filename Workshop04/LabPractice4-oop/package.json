@@ -1,0 +1,16 @@
+{
+  "name": "lab-practice-4-oop",
+  "version": "1.0.0",
+  "description": "Lab Practice 4.1-4.4 TypeScript exercises",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "ts-node index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
