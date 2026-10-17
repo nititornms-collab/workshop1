@@ -1,0 +1,20 @@
+{
+  "name": "ws12",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Chapter 14 Workshop - Inventory and Order System using TypeScript, DAO Pattern, and SQLite",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
