@@ -1,0 +1,16 @@
+{
+  "name": "assignment6-product-inventory",
+  "version": "1.0.0",
+  "description": "Assignment 6 - Product Inventory with TypeScript accessors",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "ts-node index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
