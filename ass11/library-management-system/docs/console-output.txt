@@ -1,0 +1,13 @@
+=== Sunset Library ===
+
+Books:
+1. The Pragmatic Programmer by David Thomas and Andrew Hunt (ISBN: 978-0135957059, Format: PrintedBook) — Available
+2. Programming TypeScript by Boris Cherny (ISBN: 978-1492056355, Format: EBook) — Available
+
+Borrow / Return:
+The Pragmatic Programmer was borrowed successfully by Alice.
+The Pragmatic Programmer was returned successfully.
+
+Final book status:
+1. The Pragmatic Programmer by David Thomas and Andrew Hunt (ISBN: 978-0135957059, Format: PrintedBook) — Available
+2. Programming TypeScript by Boris Cherny (ISBN: 978-1492056355, Format: EBook) — Available

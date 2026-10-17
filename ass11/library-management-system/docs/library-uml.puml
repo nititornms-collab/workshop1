@@ -1,0 +1,65 @@
+@startuml
+title Library Management System - UML Class Diagram
+skinparam classAttributeIconSize 0
+skinparam style strictuml
+
+class Library {
+  - name: string
+  - books: Map<string, Book>
+  - members: Map<string, Member>
+  - loans: Map<string, Loan>
+  + Library(name: string)
+  + addBook(book: Book): void
+  + registerMember(member: Member): void
+  + borrowBook(isbn: string, memberId: string): string
+  + returnBook(isbn: string, memberId: string): string
+  + listBooks(): string[]
+  + listMembers(): Member[]
+}
+
+class Book {
+  + readonly isbn: string
+  + title: string
+  + author: string
+  + readonly format: BookFormat
+  + Book(isbn: string, title: string, author: string, format: BookFormat)
+  + getDetails(): string
+}
+
+interface Member {
+  + memberId: string
+  + name: string
+  + email: string
+}
+
+interface Loan {
+  + isbn: string
+  + memberId: string
+  + borrowedAt: Date
+}
+
+enum BookFormat {
+  PrintedBook
+  EBook
+}
+
+Library "1" o-- "0..*" Book : aggregates
+Library "1" o-- "0..*" Member : registers
+Library "1" *-- "0..*" Loan : manages
+Loan "0..*" --> "1" Book : identifies by ISBN
+Loan "0..*" --> "1" Member : borrowed by
+Book --> BookFormat : format
+
+note right of Library
+  A book can have at most one
+  active loan at a time.
+  Only the borrowing member
+  can return that book.
+end note
+
+note bottom of Book
+  Implementation phase selects
+  exactly two classes: Book and Library.
+  Member and Loan are interfaces.
+end note
+@enduml
