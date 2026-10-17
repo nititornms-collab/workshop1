@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="940" viewBox="0 0 1500 940">
+<rect width="1500" height="940" fill="#f4f7fb"/>
+<text x="750" y="48" text-anchor="middle" font-family="Arial" font-size="30" font-weight="bold" fill="#17243a">Workshop 1: Coffee Shop Design — UML Class Diagram</text>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#26384f"/></marker><marker id="triangle" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M1,1 L14,8 L1,15 z" fill="#f4f7fb" stroke="#26384f" stroke-width="1.5"/></marker></defs>
+<!-- classes -->
+<g font-family="Arial" fill="#17243a" stroke="#26384f" stroke-width="2">
+<rect x="70" y="120" width="300" height="235" rx="7" fill="#fff"/><rect x="70" y="120" width="300" height="48" fill="#d8eaff"/><path d="M70 168H370 M70 260H370" fill="none"/>
+<rect x="455" y="120" width="300" height="235" rx="7" fill="#fff"/><rect x="455" y="120" width="300" height="48" fill="#d8eaff"/><path d="M455 168H755 M455 260H755" fill="none"/>
+<rect x="840" y="120" width="300" height="235" rx="7" fill="#fff"/><rect x="840" y="120" width="300" height="48" fill="#d8eaff"/><path d="M840 168H1140 M840 260H1140" fill="none"/>
+<rect x="455" y="510" width="300" height="230" rx="7" fill="#fff"/><rect x="455" y="510" width="300" height="48" fill="#ffe8b5"/><path d="M455 558H755 M455 630H755" fill="none"/>
+<rect x="70" y="510" width="300" height="230" rx="7" fill="#fff"/><rect x="70" y="510" width="300" height="48" fill="#e0f6e8"/><path d="M70 558H370 M70 630H370" fill="none"/>
+<rect x="1030" y="510" width="300" height="180" rx="7" fill="#fff"/><rect x="1030" y="510" width="300" height="48" fill="#f0e4ff"/><path d="M1030 558H1330 M1030 620H1330" fill="none"/>
+<rect x="1030" y="760" width="300" height="145" rx="7" fill="#fff"/><rect x="1030" y="760" width="300" height="48" fill="#f0e4ff"/><path d="M1030 808H1330 M1030 856H1330" fill="none"/>
+</g>
+<g font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#17243a">
+<text x="220" y="151">Customer</text><text x="605" y="151">Order</text><text x="990" y="151">Drink</text><text x="605" y="541">Payment (abstract)</text><text x="220" y="541">OrderItem</text><text x="1180" y="541">CashPayment</text><text x="1180" y="791">QRPayment</text>
+</g>
+<g font-family="Courier New" font-size="16" fill="#17243a">
+<text x="86" y="195">- customerId: String</text><text x="86" y="220">- name: String</text><text x="86" y="245">- phone: String</text><text x="86" y="292">+ createOrder(): Order</text><text x="86" y="317">+ pay(order, payment): bool</text>
+<text x="471" y="195">- orderNumber: String</text><text x="471" y="220">- date: Date</text><text x="471" y="245">- items: List&lt;OrderItem&gt;</text><text x="471" y="292">+ addDrink(drink, qty): void</text><text x="471" y="317">+ calculateTotal(): Decimal</text>
+<text x="856" y="195">- name: String</text><text x="856" y="220">- price: Decimal</text><text x="856" y="245">- drinkId: String</text><text x="856" y="292">+ getName(): String</text><text x="856" y="317">+ getPrice(): Decimal</text>
+<text x="86" y="585">- drink: Drink</text><text x="86" y="610">- quantity: Integer</text><text x="86" y="660">+ getSubtotal(): Decimal</text><text x="471" y="588">- amount: Decimal</text><text x="471" y="613">- paidAt: DateTime</text><text x="471" y="660">+ pay(amount): bool</text>
+<text x="1046" y="585">+ pay(amount): bool</text><text x="1046" y="644">+ acceptCash(): bool</text>
+<text x="1046" y="835">- transactionId: String</text><text x="1046" y="883">+ generateQR(): String</text>
+</g>
+<!-- relations -->
+<g stroke="#26384f" stroke-width="2.5" fill="none">
+<path d="M370 230 H455" marker-end="url(#arrow)"/>
+<path d="M755 230 H840" marker-end="url(#arrow)"/>
+<path d="M605 355 V440 H220 V510" marker-end="url(#arrow)"/>
+<path d="M370 625 H455" marker-end="url(#arrow)"/>
+<path d="M755 625 H900 V600 H1030" marker-end="url(#triangle)"/>
+<path d="M1180 690 V760" marker-end="url(#triangle)"/>
+</g>
+<g font-family="Arial" font-size="15" fill="#26384f">
+<text x="380" y="218">1</text><text x="430" y="218">0..*</text><text x="766" y="218">1</text><text x="812" y="218">1..*</text>
+<text x="615" y="420">1</text><text x="235" y="493">1..*</text><text x="380" y="612">1</text><text x="430" y="612">1</text>
+<text x="800" y="610">inheritance</text>
+</g>
+<text x="70" y="835" font-family="Arial" font-size="17" fill="#43546b">Legend: solid arrow = association / navigability; hollow triangle = inheritance</text>
+<text x="70" y="865" font-family="Arial" font-size="15" fill="#43546b">Order contains one or more OrderItems; each OrderItem references one Drink. Payment types inherit from Payment.</text>
+</svg>
