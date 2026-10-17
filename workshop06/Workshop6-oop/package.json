@@ -1,0 +1,16 @@
+{
+  "name": "workshop-6-oop",
+  "version": "1.0.0",
+  "description": "Workshop 6.1 and 6.2 - Encapsulation and Accessors",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "ts-node index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
